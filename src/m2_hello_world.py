@@ -59,7 +59,7 @@ print('Hello, World')
 #   Look at the Console to be sure that your string printed as expected.
 #
 ########################################################################
-print("IM ALIVE")
+print("IM ALIVE ")
 ########################################################################
 #
 # DONE: 4.
