@@ -2,10 +2,10 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Brian Whitacre.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 # On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
@@ -28,3 +28,29 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #  Don't forget to COMMIT your work by using  VCS ~ Commit and Push.
 ########################################################################
+import rosegraphics as rg # import the rosegraphics
+window = rg.TurtleWindow() # set up windows
+# set up the names of the turtle
+John = rg.SimpleTurtle()
+Mike = rg.SimpleTurtle()
+Shell = rg.SimpleTurtle()
+# changes colors of the turtles
+John.pen = rg.Pen("red",1)
+Mike.pen = rg.Pen('blue',1)
+Shell.pen = rg.Pen('green',1)
+# moves the turtles John and Mike sideways
+John.forward(100)
+Mike.backward(100)
+# change speed to be fast
+John.speed = 30
+Mike.speed= 30
+Shell.speed = 30
+size = 46 # size of the hexagon
+for i  in range(47):
+    # stat drawing hexagons larger and larger
+    John.draw_regular_polygon(6, size)
+    Mike.draw_regular_polygon(6, size)
+    Shell.draw_regular_polygon(6, size)
+    size = i # change size of hexagon
+    print(size) # print size of hexagon
+window.close_on_mouse_click()
